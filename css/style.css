@@ -1,10 +1,10 @@
 :root {
     --clr-bg: #fff;
-    --btnbg: rgb(208, 208, 208);
-    
+    --btn: #999;
+
     --clr-neon:#00d1ca;
 }     
-  
+
 
 *,
 *::before,
@@ -16,22 +16,23 @@
 
 .darkmode {
     --clr-bg: #333;
-    --btnbg: rgb(73, 73, 73);
-    
-  }
-
-
-  input[type="color"] {
-	border: none;
-	width: 12px;
-	height: 8px;
+    --btn: #dedede;
 }
+
+
+input[type="color"] {
+    border: solid 2px var(--btn);
+    width: 12px;
+    height: 8px;
+}
+
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
 }
 input[type="color"]::-webkit-color-swatch {
 	border: none;
 }
+
 body {
     min-height: 100vh;
     display: grid;
@@ -43,35 +44,35 @@ body {
 
 input{
     position: absolute;
-z-index: 100;
-top: 1em;
-left: 1em;
-padding: 4px;
-cursor: pointer;
-border-radius: 5px;
-width: 16px;
-height: 10px;
+    z-index: 100;
+    top: 1em;
+    left: 1em;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 16px;
+    height: 10px;
 
 }
 .dark-mode-toggle {
-position: absolute;
-z-index: 100;
-top: 1em;
-right: 1em;
-color: var(--clr-neon);
-border: 2px solid currentColor;
-padding: 4px;
-background: transparent;
-cursor: pointer;
-border-radius: 5px;
-width: 30px;
-height: 30px;
-background-image: var(--btnbg);
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--clr-neon);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--btn);
 }
 
 
 .neon-button{
-   margin-bottom: 130px;
+    margin-bottom: 130px;
     font-size: 4rem;
 
     display: inline-block;
@@ -104,9 +105,9 @@ background-image: var(--btnbg);
     height: 100%;
 
     transform: perspective(1em)
-     rotateX(40deg) scale(1, 0.35);
-     filter: blur(1.5em);
-     opacity: 0.7;
+    rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.7;
 }
 
 
@@ -126,9 +127,14 @@ background-image: var(--btnbg);
 }
 
 .picker {
-    padding: 1rem;
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    left: 1em;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 5px;
     background-color: var(--clr-neon);
-    color: var(--clr-bg);
 }
 
 .neon-button:hover,
